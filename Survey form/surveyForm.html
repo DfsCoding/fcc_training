@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+  
+  <title>Survey form</title>
+</head>
+<body>
+  
+  <div class="container">
+    <header class="header">
+      <h1 id="title">Survey form</h1>
+      <p>This is a survey form for freecodecamp training session.
+    </header>
+  </div>
+  <div > 
+    <form id="survey-form" class="formulaire">
+      <fieldset>
+        <label for="name-label">Name<input id="name-label" type=text>
+        <label for="email-label">eMail<input id="email-label" type=email></label>
+        <label for="number-label">Age<input id="number-label" type=integer min=14 max=105 ></label>
+      </fieldset>
+      <fieldset>
+        <label>What are you following</label>
+        <select for="dropdown" >
+          <option id="dropdown" selected disabled>(Chose one)</option>
+          <option id="dropdown">Option 1</option>
+          <option id="dropdown">Option 2</option>
+          <option id="dropdown">Option 3</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <label>Comment<textarea rows=3 cols=30>
+        </textarea></fieldset>
+        <input type=submit>
+      </fieldset>
+      </form> 
+  </div>
+</body>
