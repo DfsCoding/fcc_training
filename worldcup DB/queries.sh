@@ -38,7 +38,7 @@ echo -e "\nList of teams who played in the 2014 'Eighth-Final' round:"
 echo "$($PSQL "select name from games full join teams on teams.team_id=games.winner_id or teams.team_id=games.opponent_id  where year=2014 and round='Eighth-Final' order by name ;")"
 
 echo -e "\nList of unique winning team names in the whole data set:"
-echo "$($PSQL "select distinct name from games full join teams on teams.team_id=games.winner_id order by name;")"
+echo "$($PSQL "select distinct name from games left join teams on teams.team_id=games.winner_id order by name;")"
 
 echo -e "\nYear and team name of all the champions:"
 echo "$($PSQL "select year, name from games full join teams on teams.team_id=games.winner_id where round='Final' order by year;")"
